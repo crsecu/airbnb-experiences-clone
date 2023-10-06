@@ -4,6 +4,8 @@
 
 body {
   margin: 0;
+  font-family: Poppins;
+  
 }
 
 section {
@@ -25,19 +27,110 @@ section {
   flex-direction: column;
 }
 
-.hero__img {
-   width: 100%; 
-   object-fit: cover;
+.hero__img-container {
+  padding: 30px;
 }
 
-h1, h2 {
-  width: 60%;
+.hero__img {
+   width: 100%; 
+}
+
+.hero__header {
+  font-size: 2rem;
+  margin: 32px 16px 0 0;
+}
+
+.hero__text{
+  font-size: 1rem;
+  width: 75%;
+}
+
+
+/* media query for Galaxy Fold */
+@media (max-width: 280px) {
+  .hero__img-container {
+    padding: 10px;
+  }
+
+  .hero__header {
+    font-size: 1.875rem;
+    margin: 32px 16px 0 0;
+    line-height: 2.75rem;
+  }
+  
+  .hero__text{
+    font-size: 1rem;
+    width: 75%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .hero__img-container {
-    padding: 0 200px;
+    padding: 0 100px;
   }
 
+  .hero__text{
+    font-size: 1.5rem;
+    width: 60%;
+  }
+
+  section {
+    padding: 40px;
+  };
+
   
+}
+
+/* Styles for Main Content */
+
+.card__image-container {
+  position: relative;
+}
+
+.card__tag {
+ background-color: white;
+ color: #222;
+ position: absolute;
+ top: 8px;
+ left: 8px;
+ font-size: 0.75rem;
+ padding: 4px;
+ border-radius: 2px;
+ font-weight: 400;
+}
+
+/* <img className = "card__exp-star" src={star}/>
+        <span className="card__exp-rating">5.0</span>
+        <span className="card__exp-available">(6)</span>
+        <span className="card__exp-location">USA  </span>
+        <h2>Life lessons with Katie Zaferes</h2>
+        <span className="card__exp-price">From $136</span>
+        <span>/person</span> */
+
+/* // TODO: Temporary use of text-decoration: none for design alignment, improve accessibility later */
+a {
+  text-decoration:none;
+}
+
+.card__exp-star {
+  width: 16px;
+}
+
+.card__exp-rating {
+  margin: 0 3px;
+}
+
+.card__exp-available, 
+.card__exp-location {
+  color: #918E9B;
+}
+
+.card__exp-name {
+  font-weight: normal;
+  font-size: 1.25rem;
+  margin: 8px 0;
+}
+
+.card__exp-price {
+  font-weight: bold;
 }
