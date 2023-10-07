@@ -4,7 +4,7 @@ import star from "../images/star.png";
 export default function Card({id, title, price, coverImg, rating, reviewCount, location, openSpots}) {
     const checkAvailability = openSpots > 0 ? '' : "SOLD"
   return (
-      <div href="#" className="card">
+      <div className="card">
         <div className="card__image-container" id = {id}>
             <img className = "card__image" src={`../images/${coverImg}`} alt="" />
             {openSpots < 1 && <span className = "card__tag">SOLD OUT</span>}
