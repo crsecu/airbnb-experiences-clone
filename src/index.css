@@ -82,9 +82,19 @@ section {
 }
 
 /* Styles for Main Content */
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
 
 .card__image-container {
   position: relative;
+  font-size: 12px;
+  flex: 0 0 auto;         /* ADD */
+  display: flex;          /* ADD */
+  flex-direction: column; /* ADD */
 }
 
 .card__tag {
@@ -98,15 +108,6 @@ section {
  border-radius: 2px;
  font-weight: 400;
 }
-
-/* <img className = "card__exp-star" src={star}/>
-        <span className="card__exp-rating">5.0</span>
-        <span className="card__exp-available">(6)</span>
-        <span className="card__exp-location">USA  </span>
-        <h2>Life lessons with Katie Zaferes</h2>
-        <span className="card__exp-price">From $136</span>
-        <span>/person</span> */
-
 /* // TODO: Temporary use of text-decoration: none for design alignment, improve accessibility later */
 a {
   text-decoration:none;
